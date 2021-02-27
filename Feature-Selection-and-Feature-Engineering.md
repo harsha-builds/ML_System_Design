@@ -97,7 +97,7 @@ This technique is commonly applied at many tech companies.
 - Doordash uses Store Embedding (store2vec) to personalize the store feed. Similar to word2vec, each store is one word and each sentence is one user session. Then, to generate vectors for a consumer, we sum the vectors for each store they ordered from in the past 6 months or a total of 100 orders. Then, the distance between a store and a consumer is determined by taking the cosine distance between the store’s vector and the consumer’s vector.
 - Similarly, Instagram uses account embedding to recommend relevant content (photos, videos, and Stories) to users.
 
-> The embedding dimensionality is usually determined experimentally or from experience. In TensorFlow documentation, they recommend: d = \sqrt[4]{D}d=
+> The embedding dimensionality is usually determined experimentally or from experience. In TensorFlow documentation, they recommend: d =
 ​4
 ​ √
 ​D
