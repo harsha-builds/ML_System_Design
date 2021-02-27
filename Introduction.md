@@ -1,5 +1,9 @@
 # Introduction:
 
+We will learn how to approach machine learning system design from a top-down view. It’s important for candidates to realize the challenges early on and address them at a structural level. Here is one example of the thinking flow:
+
+![Intro-6-steps](https://github.com/Harsha2409/ML_System_Design/blob/main/intro-6steps.PNG)
+
 ## Problem statement:
 It’s important to state the correct problems. It is the candidates job to understand the intention of the design and why it is being optimized. It’s important to make the right assumptions and discuss them explicitly with interviewers. For example, in a LinkedIn feed design interview, the interviewer might ask broad questions:
 
