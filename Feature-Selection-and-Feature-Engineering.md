@@ -98,7 +98,7 @@ This technique is commonly applied at many tech companies.
 - Similarly, Instagram uses account embedding to recommend relevant content (photos, videos, and Stories) to users.
 
 > The embedding dimensionality is usually determined experimentally or from experience. In TensorFlow documentation, they recommend: d =
-​4
+​​4
 ​ √
 ​D
 ​
