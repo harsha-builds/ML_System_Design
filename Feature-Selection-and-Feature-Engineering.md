@@ -4,7 +4,7 @@
 One hot encoding is a very common technique in feature engineering. It converts categorical variables into a one-hot numeric array.
 One hot encoding is very popular when you have to deal with categorical features that have medium cardinality.
 
---image
+![one-hot](https://github.com/Harsha2409/ML_System_Design/blob/main/one-hot-encoding.PNG)
 
 ### Common problems
 - Expansive computation and high memory consumption are major problems with one hot encoding. High numbers of values will create high-dimensional feature vectors. For example, if there are one million unique values in a column, it will produce feature vectors that have a dimensionality of one million.
@@ -29,15 +29,15 @@ Feature hashing, called the hashing trick, converts text data or categorical att
 ### Feature hashing example
 - First, you chose the dimensionality of your feature vectors. Then, using a hash function, you convert all values of your categorical attribute (or all tokens in your collection of documents) into a number. Then you convert this number into an index of your feature vector. The process is illustrated in the diagram below:
 
---image
+![fh](https://github.com/Harsha2409/ML_System_Design/blob/main/feature-hashing.PNG)
 
 - Let’s illustrate what it would look like to convert the text “The quick brown fox” into a feature vector. The values for each word in the phrase are:
+![fh1](https://github.com/Harsha2409/ML_System_Design/blob/main/img-fh1.PNG)
 
 - Let define a hash function, hh, that takes a string as input and outputs a non-negative integer. Let the desired dimensionality be 5. By applying the hash function to each word and applying the modulo of 5 to obtain the index of the word, we get:
+![fh2](https://github.com/Harsha2409/ML_System_Design/blob/main/img-fh2.PNG)
 
---image
-
--In this example:
+- In this example:
 
 `h(the) mod 5 = 0` means that we have one word in dimension 0 of the feature vector.
 
@@ -66,7 +66,7 @@ Depending on application, you can choose the number of bits for feature hashing 
 
 - As an example, suppose we have Uber pick-up data with latitude and longitude stored in the database, and we want to predict demand at a certain location. If we just use the feature latitude for learning, the model might learn that a city block at a particular latitude is more likely to have a higher demand than others. This is similar for the feature longitude. However, a feature cross of longitude by latitude would represent a well-defined city block. Consequently, the model will learn more accurately.
 
---image
+![cf](https://github.com/Harsha2409/ML_System_Design/blob/main/cross-feature.PNG)
 
 Read more about different techniques in handling latitude/longitude: Haversine distance, Manhattan distance.
 
@@ -81,6 +81,6 @@ Feature embedding is an emerging technique that aims to transform features from 
 ### Benefits
 - Both one hot encoding and feature hashing can represent features in another dimension. However, these representations do not usually preserve the semantic meaning of each feature. For example, in the #*Word2Vector*# representation, embedding words into dense multidimensional representation helps to improve the prediction of the next words significantly.
 
---image
+![embedding](https://github.com/Harsha2409/ML_System_Design/blob/main/embedding.PNG)
 
 - As an example, each word can be represented as a `d` dimension vector, and we can train our supervised model. We then use the output of one of the fully connected layers of the neural network model as embeddings on the input object. For example, `cat` embedding can be represented as a `[1.2, -0.1, 4.3, 3.2] vector`.
