@@ -84,3 +84,24 @@ Feature embedding is an emerging technique that aims to transform features from 
 ![embedding](https://github.com/Harsha2409/ML_System_Design/blob/main/embedding.PNG)
 
 - As an example, each word can be represented as a `d` dimension vector, and we can train our supervised model. We then use the output of one of the fully connected layers of the neural network model as embeddings on the input object. For example, `cat` embedding can be represented as a `[1.2, -0.1, 4.3, 3.2] vector`.
+
+### How to generate/learn embedding vector?
+For popular deep learning frameworks like TensorFlow, you need to define the dimension of embedding and network architecture. Once defined, the network can learn embedding automatically. For example:
+
+--image
+
+### Embedding in tech companies 
+This technique is commonly applied at many tech companies.
+
+- Twitter uses Embedding for UserIDs and cases like recommendations, nearest neighbor searches, and transfer learning.
+- Doordash uses Store Embedding (store2vec) to personalize the store feed. Similar to word2vec, each store is one word and each sentence is one user session. Then, to generate vectors for a consumer, we sum the vectors for each store they ordered from in the past 6 months or a total of 100 orders. Then, the distance between a store and a consumer is determined by taking the cosine distance between the store’s vector and the consumer’s vector.
+- Similarly, Instagram uses account embedding to recommend relevant content (photos, videos, and Stories) to users.
+
+The embedding dimensionality is usually determined experimentally or from experience. In TensorFlow documentation, they recommend: d = \sqrt[4]{D}d=
+​4
+​​ √
+​D
+​
+​​ . Where DD is the number of categories. Another way is to treat dd as a hyperparameter, and we can tune on a downstream task.
+
+In large scale production, embedding features are usually pre-computed and stored in key/value storage to reduce inference latency.
