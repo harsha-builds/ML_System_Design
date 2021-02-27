@@ -88,7 +88,7 @@ Feature embedding is an emerging technique that aims to transform features from 
 ### How to generate/learn embedding vector?
 For popular deep learning frameworks like TensorFlow, you need to define the dimension of embedding and network architecture. Once defined, the network can learn embedding automatically. For example:
 
---image
+![rmbed](https://github.com/Harsha2409/ML_System_Design/blob/main/embed1.PNG)
 
 ### Embedding in tech companies 
 This technique is commonly applied at many tech companies.
