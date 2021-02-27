@@ -7,7 +7,7 @@ We will learn how to approach machine learning system design from a top-down vie
 ## Problem statement:
 It’s important to state the correct problems. It is the candidates job to understand the intention of the design and why it is being optimized. It’s important to make the right assumptions and discuss them explicitly with interviewers. For example, in a LinkedIn feed design interview, the interviewer might ask broad questions:
 
-Design LinkedIn Feed Ranking.
+`Design LinkedIn Feed Ranking`
 
 Asking questions is crucial to filling in any gaps and agreeing on goals. The candidate should begin by asking follow-up questions to clarify the problem statement. For example:
 
@@ -23,7 +23,7 @@ During the development phase, we need to quickly test model performance using of
 - [1] Identify requirements
 - [2] Training requirements
 
-There are many components required to train a model from end to end. These components include the data collection, feature engineering, feature selection, and loss function. For example, if we want to design a YouTube video recommendations model, it’s natural that the user doesn’t watch a lot of recommended videos. Because of this, we have a lot of negative examples.
+There are many components required to train a model from end to end. These components include the data collection, feature engineering, feature selection, and loss function. For example, if we want to design a `YouTube video recommendations model`, it’s natural that the user doesn’t watch a lot of recommended videos. Because of this, we have a lot of negative examples.
 The question is asked: How do we train models to handle an imbalance class?
 
 Once we deploy models in production, we will have feedback in real time. How do we monitor and make sure models don’t go stale?
@@ -37,14 +37,14 @@ How do we design inference components to provide high availability and low laten
 ### Train and evaluate model
 There are usually three components: feature engineering, feature selection, and models. We will use all the modern techniques for each component.
 
-For example, in Rental Search Ranking, we will discuss if we should use ListingID as embedding features. In Estimate Food Delivery Time, we will discuss how to handle the latitude and longitude features efficiently.
+For example, in `Rental Search Ranking`, we will discuss if we should use ListingID as embedding features. In `Estimate Food Delivery Time`, we will discuss how to handle the latitude and longitude features efficiently.
 
 -------------------------------------
 
 ## Design high level system
 In this stage, we need to think about the system components and how data flows through each of them. The goal of this section is to identify a minimal, viable design to demonstrate a working system. We need to explain why we decided to have these components and what their roles are.
 
-For example, when designing Video Recommendation systems, we would need two separate components: the Video Candidate Generation Service and the Ranking Model Service.
+For example, when designing `Video Recommendation systems`, we would need two separate components: the `Video Candidate Generation Service` and the `Ranking Model Service`.
 
 -----------------------------
 
