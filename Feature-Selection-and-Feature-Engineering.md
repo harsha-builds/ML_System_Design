@@ -99,7 +99,7 @@ This technique is commonly applied at many tech companies.
 
 > The embedding dimensionality is usually determined experimentally or from experience. In TensorFlow documentation, they recommend: d = \sqrt[4]{D}d=
 ​4
-​​ √
+​ √
 ​D
 ​
 ​​ . Where DD is the number of categories. Another way is to treat dd as a hyperparameter, and we can tune on a downstream task.
