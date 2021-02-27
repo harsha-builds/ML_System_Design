@@ -102,6 +102,53 @@ This technique is commonly applied at many tech companies.
 ​ √
 ​D
 ​
-​​ . Where DD is the number of categories. Another way is to treat dd as a hyperparameter, and we can tune on a downstream task.
+​​ . Where D is the number of categories. Another way is to treat dd as a hyperparameter, and we can tune on a downstream task.
 
 > In large scale production, embedding features are usually pre-computed and stored in key/value storage to reduce inference latency.
+
+-----------------------------------------
+## 5. Numeric Features
+
+### Normalization
+For numeric features, normalization can be done to make the mean equal 0, and the values be in the range [-1, 1]. There are some cases where we want to normalize data between the range [0, 1].
+
+v=
+​max_of_v−min_of_v
+​
+​v−min_of_v
+​​ 
+
+where,
+
+v is feature value,
+
+min\_of\_vmin_of_v is a minimum of feature value,
+
+max\_of\_vmax_of_v is a maximum of feature value
+
+### Standardization
+-  features distribution resembles a normal distribution, then we can apply a standardized transformation.
+
+v=
+​std_of_v
+​
+​v−mean_of_v
+​​ 
+
+where,
+
+v is feature value,
+
+mean\_of\_vmean_of_v is a mean of feature value,
+
+std\_of\_vstd_of_v is the standard deviation of feature value
+
+-  feature distribution resembles power laws, then we can transform it by using the formula:
+
+log(
+​1+median_of_v
+​
+​1+v
+​​ )
+
+>  practice, normalization can cause an issue as the values of min and max are usually outliers. One possible solution is “clipping”, where we choose a “reasonable” value for min and max.
