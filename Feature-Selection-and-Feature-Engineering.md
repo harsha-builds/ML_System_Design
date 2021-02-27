@@ -112,7 +112,7 @@ This technique is commonly applied at many tech companies.
 ### Normalization
 For numeric features, normalization can be done to make the mean equal 0, and the values be in the range [-1, 1]. There are some cases where we want to normalize data between the range [0, 1].
 
-v=
+v = \frac{v - min\_of\_v}{max\_of\_v - min\_of\_v}v=
 ​max_of_v−min_of_v
 ​
 ​v−min_of_v
