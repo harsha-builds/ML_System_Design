@@ -5,7 +5,8 @@
 
 ## Data partitioning 
 - Parquet and ORC files usually get partitioned by time for efficiency as we can avoid scanning through the whole dataset. In this example, we partition data by year then by month. In practice, most common services on AWS, RedShift, and Athena support Parquet and ORC. In comparison to other formats like csv, Parquet can speed up the query times to be 30x faster, save 99% of the cost, and reduce the data that is scanned by 99%
---image
+
+![](https://github.com/Harsha2409/ML_System_Design/blob/main/data-partioning.PNG)
 
 -------------
 
@@ -13,10 +14,13 @@
 In ML use cases like Fraud Detection, Click Prediction, or Spam Detection, it’s common to have imbalance labels. There are few strategies to handle them.
 
 - Use class weights in loss function: For example, in a spam detection problem where non-spam data has 95% data compare to other spam data which has only 5%. We want to penalize more in the non-spam class. In this case, we can modify the entropy loss function using weight.
---image
+
+![](https://github.com/Harsha2409/ML_System_Design/blob/main/class-imbalance.PNG)
+
 - Use naive resampling: Resample the non-spam class at a certain rate to reduce the imbalance in the training set. It’s important to have validation data and test data intact (no resampling).
 - Use synthetic resampling: The Synthetic Minority Oversampling Technique (SMOTE) consists of synthesizing elements for the minority class, based on those that already exist. It works by randomly picking a point from the minority class and computing the k-nearest neighbors for that point. The synthetic points are added between the chosen point and its neighbors. For practical reasons, SMOTE is not as widely used as other methods.
---image
+
+![](https://github.com/Harsha2409/ML_System_Design/blob/main/synthetic-resampling.PNG)
 
 ----------------------------------------
 ## Choose the right loss function
