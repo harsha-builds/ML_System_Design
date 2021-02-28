@@ -6,3 +6,6 @@ This repo contains notes from my Machine Learning System Design class on educati
 ## [3] [Training Pipelines](https://github.com/Harsha2409/ML_System_Design/blob/main/training-pipelines.md)
 ## [4] [Inference]()
 ## [5] [Metrics Evaluation]()
+
+
+Thanks to Utkarsh Singh for the subscription
